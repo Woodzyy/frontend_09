@@ -11,17 +11,27 @@
 
 <body>
     <header class="header">
-        <ul class="menu">
-            <li class="menu__item"><a href="#">Menu1</a></li>
-            <li class="menu__item"><a href="#">Menu2</a></li>
-            <li class="menu__item"><a href="#">Menu3</a></li>
-            <li class="menu__item"><a href="#">Menu4</a></li>
-            <li class="menu__item"><a href="#">Menu5</a></li>
+        <ul class="header_menu">
+            <li class="header_menu__item"><a class="menu__link" href="#">Поиск авиатуров</a></li>
+            <li class="header_menu__item"><a class="menu__link" href="#">Отели</a></li>
+            <li class="header_menu__item"><a class="menu__link" href="#">Авиабилеты</a></li>
+            <li class="header_menu__item"><a class="menu__link" href="#">Визы</a></li>
+            <li class="header_menu__item"><a class="menu__link" href="#">Страховка</a></li>
         </ul>
     </header>
     <div class="wrapper">
-        <img class="header__logo" src="img/header_logo.jpg" alt="header_logo">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <div class="wrapper_item">
+            <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+            <form class="form_search" action="https://fom.in.ua/echo" target="_blank">
+                <input type="text" name="text" class="search" placeholder="Название отеля или направление">
+                <input type="submit" name="submit" class="submit" value="Искать">
+            </form>
+        </div>
+        <div class="wrapper_item__contacts">
+            <p>Пушкинская,23</p>
+            <p> <a href="tel:+380123456789">+380123456789</a></p>
+            <p> <a href="tel:+380123456789">+380123456789</a></p>
+        </div>
     </div>
 </body>
 

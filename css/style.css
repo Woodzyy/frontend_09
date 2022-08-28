@@ -1,6 +1,8 @@
 * {
   margin: 0; /* Аннулируем внешние отступы  */
   padding: 0; /* Аннулируем внутренние отступы */
+  border: 0;
+  outline: 0;
   box-sizing: border-box; /* Задаем параметр границам блока */
 }
 
@@ -20,35 +22,83 @@ a {
   text-decoration: none; /* Убираем стандратную стилизацию для ссылок  */
 }
 
-.header {
+.header,
+.header_menu {
   display: flex;
   flex-direction: row;
+}
+
+.header {
   justify-content: center;
   width: 100%;
   position: fixed;
   padding: 0.5% 1%;
+  background-color: aliceblue;
   border: 2px solid orchid;
 }
 
-.menu {
-  display: flex;
-  flex-direction: row;
+.header_menu {
   justify-content: space-between;
   width: 75%;
   border: 2px solid yellow;
 }
 
-.menu__item {
+.header_menu__item {
   display: inline-block;
   padding: 0.5% 1.5%;
   border: 2px solid rgb(8, 233, 68);
 }
 
+.menu__link {
+  color: black;
+}
+
+.menu__link:hover {
+  cursor: pointer;
+  color: rgb(255, 115, 0);
+}
+
+.form_search {
+  padding: 2%;
+  border: 2px solid brown;
+}
+
+.search {
+  width: 75%;
+  margin-left: 5%;
+  font-size: 1rem;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.submit {
+  width: 15%;
+  padding: 1.7%;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  color: aliceblue;
+  background-color: rgb(30, 108, 255);
+  border-radius: 10px;
+}
+
 .wrapper {
+  display: flex;
+  background-color: aquamarine;
   padding-top: 5%;
   border: 2px solid rgb(37, 1, 244);
 }
 
 .header__logo {
   width: 9%;
+}
+
+.wrapper_item {
+  width: 70%;
+  padding: 1%;
+  border: 2px solid rgb(255, 0, 0);
+}
+
+.wrapper_item__contacts {
+  width: 30%;
+  border: 2px solid rgb(2, 217, 66);
 }
