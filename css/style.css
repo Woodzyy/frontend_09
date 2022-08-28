@@ -12,4 +12,43 @@ body {
   font-family: 'Silkscreen', cursive; /* Задаем стандратный шрифт для всей страницы  */
   font-size: 1rem; /* Задаем размер шрифта в rem  */
   line-height: 1; /* Задаем величину пространства между строками  */
+  width: 100%; /* Задаем размер для body  */
+  height: 200vh;
+}
+
+a {
+  text-decoration: none; /* Убираем стандратную стилизацию для ссылок  */
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  padding: 0.5% 1%;
+  border: 2px solid orchid;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  border: 2px solid yellow;
+}
+
+.menu__item {
+  display: inline-block;
+  padding: 0.5% 1.5%;
+  border: 2px solid rgb(8, 233, 68);
+}
+
+.wrapper {
+  padding-top: 5%;
+  border: 2px solid rgb(37, 1, 244);
+}
+
+.header__logo {
+  width: 9%;
 }
