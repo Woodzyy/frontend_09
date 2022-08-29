@@ -1,8 +1,8 @@
 * {
   margin: 0; /* Аннулируем внешние отступы  */
   padding: 0; /* Аннулируем внутренние отступы */
-  border: 0;
-  outline: 0;
+  border: 0; /* Аннулируем границы блока */
+  outline: 0; /* Аннулируем дополнительные рамки за пределами блока */
   box-sizing: border-box; /* Задаем параметр границам блока */
 }
 
@@ -15,7 +15,6 @@ body {
   font-size: 1rem; /* Задаем размер шрифта в rem  */
   line-height: 1; /* Задаем величину пространства между строками  */
   width: 100%; /* Задаем размер для body  */
-  height: 200vh;
 }
 
 a {
@@ -25,23 +24,15 @@ a {
 .header,
 .header__menu,
 .wrapper,
-.wrapper__item,
+.wrapper p,
 .wrapper__form,
 .wrapper__item--contacts {
   display: flex;
 }
 
 .header,
-.header__menu,
-.wrapper__item,
-.wrapper__form,
-.wrapper__item--contacts {
-  flex-direction: row;
-}
-
-.header,
 .wrapper,
-.wrapper__item,
+.wrapper p,
 .wrapper__form {
   justify-content: center;
 }
@@ -78,22 +69,24 @@ a {
 
 .wrapper {
   flex-direction: column;
-  background-image: url(../img/tur6.jpg);
+  background-image: url(../img/header_logo.jpg);
   background-size: cover;
   margin-top: 4.5%;
+  box-shadow: 0 2px 6px rgb(63, 63, 63);
 }
 
-.wrapper__item {
-  font-size: 2rem;
+.wrapper p {
   padding: 0.5%;
-  margin: 12% auto 0.5%;
+  margin: 14% 26% 0.5%;
   width: 50%;
+  font-size: 2rem;
+  font-weight: 700;
   color: aliceblue;
 }
 
 .wrapper__form {
   padding: 0.5%;
-  margin: 0% 0% 12% 0%;
+  margin: 0% 0% 11% 0%;
 }
 
 .search {
@@ -106,7 +99,6 @@ a {
 
 .submit {
   width: 15%;
-  padding: 0%;
   font-size: 1.2rem;
   color: aliceblue;
   background-color: rgb(255, 115, 0);
@@ -118,6 +110,7 @@ a {
 .wrapper__item--contacts {
   justify-content: space-around;
   align-items: center;
+  margin-top: 20%;
   width: 30%;
   border: 2px solid rgb(2, 217, 66);
 }
@@ -125,4 +118,41 @@ a {
 .wrapper__item--branch {
   color: black;
   border: 2px solid brown;
+}
+
+.main {
+  width: 100%;
+  padding: 10% 0% 0%;
+  margin: 4% auto;
+  background-image: url(../img/indonesia.jpg);
+  background-size: cover;
+  box-shadow: 0 2px 6px rgb(63, 63, 63);
+}
+
+.main__item {
+  width: 100%;
+  margin-top: 18%;
+  padding: 2%;
+  font-size: 1.5rem;
+  text-align: center;
+  color: aliceblue;
+  background-color: rgba(22, 22, 22, 0.7);
+}
+
+.main__item p:nth-of-type(1) {
+  font-size: 4rem;
+}
+
+.main__item p {
+  padding: 0.3%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8%;
+  margin: 1%;
+  border-radius: 10px;
+  background-color: rgb(255, 115, 0);
+  color: aliceblue;
+  cursor: pointer;
 }
