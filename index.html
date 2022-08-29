@@ -7,30 +7,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lorem, ipsum.</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header class="header">
-        <ul class="header_menu">
-            <li class="header_menu__item"><a class="menu__link" href="#">Поиск авиатуров</a></li>
-            <li class="header_menu__item"><a class="menu__link" href="#">Отели</a></li>
-            <li class="header_menu__item"><a class="menu__link" href="#">Авиабилеты</a></li>
-            <li class="header_menu__item"><a class="menu__link" href="#">Визы</a></li>
-            <li class="header_menu__item"><a class="menu__link" href="#">Страховка</a></li>
+        <ul class="header__menu">
+            <li class="header__menu--item">
+                <a class="menu__link" href="https://aventour.ua" target="_blank">
+                    Поиск авиатуров
+                </a>
+            </li>
+            <li class="header__menu--item">
+                <a class="menu__link" href="https://www.booking.com/" target="_blank">
+                    Отели
+                </a>
+            </li>
+            <li class="header__menu--item">
+                <a class="menu__link" href="https://avia.tickets.ua/" target="_blank">
+                    Авиабилеты
+                </a>
+            </li>
+            <li class="header__menu--item">
+                <a class="menu__link" href="https://visa-svit.com.ua/" target="_blank">
+                    Визы
+                </a>
+            </li>
+            <li class="header__menu--item">
+                <a class="menu__link" href="https://parasol.ua/ua/travel" target="_blank">
+                    Страховка
+                </a>
+            </li>
         </ul>
     </header>
     <div class="wrapper">
-        <div class="wrapper_item">
-            <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
-            <form class="form_search" action="https://fom.in.ua/echo" target="_blank">
-                <input type="text" name="text" class="search" placeholder="Название отеля или направление">
-                <input type="submit" name="submit" class="submit" value="Искать">
-            </form>
-        </div>
-        <div class="wrapper_item__contacts">
+        <p class="wrapper__item">Свежие отзывы. Самые низкие цены.</p>
+        <form class="wrapper__form" action="https://fom.in.ua/echo" target="_blank">
+            <input type="text" name="text" class="search" placeholder="Название отеля или направление">
+            <input type="submit" name="submit" class="submit" value="Искать">
+        </form>
+    </div>
+    <div class="main">
+        <form class="main__form" action="https://fom.in.ua/echo"></form>
+        <div class="main__item"></div>
+    </div>
+    <div class="wrapper__item--contacts">
+        <div class="wrapper__item--branch">
             <p>Пушкинская,23</p>
             <p> <a href="tel:+380123456789">+380123456789</a></p>
             <p> <a href="tel:+380123456789">+380123456789</a></p>
+            <p> <a href="mailto:Fasttravel@gmail.com">Fasttravel@gmail.com</a></p>
+        </div>
+        <div class="wrapper__item--branch">
+            <p>Пушкинская,23</p>
+            <p> <a href="tel:+380123456789">+380123456789</a></p>
+            <p> <a href="tel:+380123456789">+380123456789</a></p>
+            <p> <a href="mailto:Fasttravel@gmail.com">Fasttravel@gmail.com</a></p>
         </div>
     </div>
 </body>

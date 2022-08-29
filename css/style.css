@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Silkscreen', cursive; /* Задаем стандратный шрифт для всей страницы  */
+  font-family: 'Roboto', sans-serif; /* Задаем стандратный шрифт для всей страницы  */
   font-size: 1rem; /* Задаем размер шрифта в rem  */
   line-height: 1; /* Задаем величину пространства между строками  */
   width: 100%; /* Задаем размер для body  */
@@ -23,34 +23,52 @@ a {
 }
 
 .header,
-.header_menu {
+.header__menu,
+.wrapper,
+.wrapper__item,
+.wrapper__form,
+.wrapper__item--contacts {
   display: flex;
+}
+
+.header,
+.header__menu,
+.wrapper__item,
+.wrapper__form,
+.wrapper__item--contacts {
   flex-direction: row;
 }
 
-.header {
+.header,
+.wrapper,
+.wrapper__item,
+.wrapper__form {
   justify-content: center;
-  width: 100%;
-  position: fixed;
-  padding: 0.5% 1%;
-  background-color: aliceblue;
-  border: 2px solid orchid;
 }
 
-.header_menu {
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 1.5% 1%;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: aliceblue;
+  box-shadow: 0 2px 6px rgb(63, 63, 63);
+}
+
+.header__menu {
   justify-content: space-between;
   width: 75%;
-  border: 2px solid yellow;
 }
 
-.header_menu__item {
+.header__menu--item {
   display: inline-block;
   padding: 0.5% 1.5%;
-  border: 2px solid rgb(8, 233, 68);
 }
 
 .menu__link {
-  color: black;
+  color: rgb(93, 93, 93);
 }
 
 .menu__link:hover {
@@ -58,47 +76,53 @@ a {
   color: rgb(255, 115, 0);
 }
 
-.form_search {
-  padding: 2%;
-  border: 2px solid brown;
+.wrapper {
+  flex-direction: column;
+  background-image: url(../img/tur6.jpg);
+  background-size: cover;
+  margin-top: 4.5%;
+}
+
+.wrapper__item {
+  font-size: 2rem;
+  padding: 0.5%;
+  margin: 12% auto 0.5%;
+  width: 50%;
+  color: aliceblue;
+}
+
+.wrapper__form {
+  padding: 0.5%;
+  margin: 0% 0% 12% 0%;
 }
 
 .search {
-  width: 75%;
-  margin-left: 5%;
+  width: 70%;
   font-size: 1rem;
-  padding: 2%;
-  border-radius: 10px;
+  padding: 1.5%;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 4px 12px rgb(107, 107, 107);
 }
 
 .submit {
   width: 15%;
-  padding: 1.7%;
+  padding: 0%;
   font-size: 1.2rem;
-  border-radius: 10px;
   color: aliceblue;
-  background-color: rgb(30, 108, 255);
-  border-radius: 10px;
+  background-color: rgb(255, 115, 0);
+  border-radius: 0 10px 10px 0;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgb(107, 107, 107);
 }
 
-.wrapper {
-  display: flex;
-  background-color: aquamarine;
-  padding-top: 5%;
-  border: 2px solid rgb(37, 1, 244);
-}
-
-.header__logo {
-  width: 9%;
-}
-
-.wrapper_item {
-  width: 70%;
-  padding: 1%;
-  border: 2px solid rgb(255, 0, 0);
-}
-
-.wrapper_item__contacts {
+.wrapper__item--contacts {
+  justify-content: space-around;
+  align-items: center;
   width: 30%;
   border: 2px solid rgb(2, 217, 66);
+}
+
+.wrapper__item--branch {
+  color: black;
+  border: 2px solid brown;
 }
