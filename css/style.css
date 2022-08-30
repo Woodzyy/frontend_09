@@ -8,6 +8,7 @@
 
 html {
   font-size: 16px; /* Задаем размер шрифта  */
+  scroll-behavior: smooth; /* Плавное прокручивание вдоль страницы  */
 }
 
 body {
@@ -33,177 +34,212 @@ body,
 .wrapper,
 .wrapper p,
 .wrapper__form,
-.wrapper__item--contacts {
-  display: flex; /* Задаем способ компоновки для группы элементов */
+.wrapper__item--contacts,
+.container__item,
+.footer {
+  display: flex; /* Задаем способ компоновки контента для группы элементов */
 }
 
 .header,
 .wrapper,
 .wrapper p,
 .wrapper__form {
-  justify-content: center; /* задаем пространство между и вокруг элементов контента вдоль главной оси flex контейнера*/
+  justify-content: center; /* задаем пространство между и вокруг элементов контента вдоль главной оси flex контейнера */
 }
 
 .header,
-.wrapper {
-  box-shadow: 0 2px 6px rgb(63, 63, 63); /* Тень по границам блока*/
+.wrapper,
+.main {
+  box-shadow: 0 2px 6px rgb(63, 63, 63); /* Тень по границам блока */
 }
 
 .search,
 .submit {
-  box-shadow: 0 4px 12px rgb(107, 107, 107); /* Тень по границам блока*/
+  box-shadow: 0 4px 12px rgb(107, 107, 107); /* Тень по границам блока */
 }
 
-.header {
-  position: fixed; /* Фиксируем элемент*/
-  top: 0; /* Направление фиксации*/
-  padding: 1.5% 1%; /* Внутренние отступы*/
-  font-size: 1rem; /* Размер шрифта в rem*/
-  font-weight: 700; /* начертание шрифта*/
-  background-color: aliceblue; /* Цвет фона блока*/
+.menu__link:hover,
+.submit,
+.btn,
+.nav {
+  cursor: pointer; /* Стиль курсора при наведении */
 }
 
-.header__menu {
-  justify-content: space-between; /* Задаем расстояние между эелементам контейнера и границами блока*/
-  width: 75%; /* Ширина элемента*/
-}
-
-.header__menu--item {
-  display: inline-block; /* Задаем свойства строчно-блочного эелемента*/
-  padding: 0.5% 1.5%; /* Внутренние отступы*/
-}
-
-.menu__link {
-  color: rgb(53, 53, 53); /* Цвет шрифта*/
-}
-
-.menu__link:hover {
-  cursor: pointer;
-  color: rgb(255, 115, 0); /* Цвет шрифта при наведении курсора*/
-}
-
-.wrapper {
-  flex-direction: column;
-  background-image: url(../img/header_logo.jpg);
-  background-size: cover;
-  margin-top: 4.5%;
-}
-
-.wrapper p {
-  padding: 0.5%; /* Внутренние отступы*/
-  margin: 14% 26% 0.5%; /* Внешние отступы*/
-  width: 50%;
-  font-size: 2rem; /* Размер шрифта в rem*/
-  font-weight: 700;
-  color: aliceblue;
-}
-
-.wrapper__form {
-  padding: 0.5%; /* Внутренние отступы*/
-  margin: 0% 0% 11% 0%; /* Внешние отступы*/
-}
-
-.search {
-  width: 70%;
-  font-size: 1rem; /* Размер шрифта в rem*/
-  padding: 1.5%; /* Внутренние отступы*/
-  border-radius: 10px 0 0 10px;
-}
-
-.submit {
-  width: 15%;
-  font-size: 1.2rem; /* Размер шрифта в rem*/
-  color: aliceblue;
-  background-color: rgb(255, 115, 0);
-  border-radius: 0 10px 10px 0;
-  cursor: pointer;
-}
-
-.wrapper__item--contacts {
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 20%; /* Внешний отступ сверху*/
-  width: 30%;
-  border: 2px solid rgb(2, 217, 66);
-}
-
-.wrapper__item--branch {
-  color: black;
-  border: 2px solid brown;
-}
-
-.main {
-  padding: 10% 0% 0%; /* Внутренние отступы*/
-  margin: 4% auto; /* Внешние отступы*/
-  background-image: url(../img/indonesia.jpg);
-  background-size: cover;
-  box-shadow: 0 2px 6px rgb(63, 63, 63);
-}
-
-.main__item {
-  margin-top: 18%; /* Внешний отступ сверху*/
-  padding: 2%; /* Внутренние отступы*/
-  font-size: 1.5rem; /* Размер шрифта в rem*/
-  text-align: center;
-  color: aliceblue;
-  background-color: rgba(22, 22, 22, 0.7);
-}
-
-.main__item p {
-  padding: 0.3%; /* Внутренние отступы*/
-}
-
-.main__item p:nth-of-type(1) {
-  font-size: 4rem;
-}
-
+.wrapper p,
+.submit,
+.main__item,
 .btn {
-  display: inline-block;
-  padding: 0.8%; /* Внутренние отступы*/
-  margin: 1%; /* Внешние отступы*/
-  border-radius: 10px;
-  background-color: rgb(255, 115, 0);
-  color: aliceblue;
-  cursor: pointer;
+  color: aliceblue; /* Цвет шрифта */
 }
 
-.container__block {
-  width: 25%;
-  margin: 3% auto 0%; /* Внешние отступы*/
-  padding: 1%; /* Внутренние отступы*/
-  text-align: center;
-  font-size: 1.7rem;
-  border: 2px solid black;
-}
-
-.container__block--secondary {
-  margin: 0.2% auto 1%; /* Внешние отступы*/
-  padding: 0.8%; /* Внутренние отступы*/
-  text-align: center;
-  font-size: 0.9rem;
-  color: rgb(53, 53, 53);
-  width: 25%;
+.menu__link,
+.container__block--secondary,
+.container p,
+.nav {
+  color: rgb(80, 80, 80); /* Цвет шрифта */
 }
 
 .container img:nth-child(1),
-.container img:nth-child(2) {
-  display: block;
-  width: 85%;
-  margin: 1% auto; /* Внешние отступы*/
+.container img:nth-child(2),
+.container__item {
+  width: 85%; /* Задаем ширину элемента */
+}
+
+.container img:nth-child(1),
+.container img:nth-child(2),
+.container__item,
+.footer {
+  margin: 1% auto; /* Внешние отступы */
+}
+
+.main__item,
+.main__item,
+.container__block,
+.container__block--secondary,
+.container p {
+  text-align: center; /* Расположение текста внутри блока */
+}
+
+.wrapper,
+.main {
+  background-size: cover; /* Растягивание фона с сохранением пропорций */
+}
+
+.submit,
+.btn {
+  background-color: rgb(255, 115, 0); /* Цвет фона */
+}
+
+.header,
+.search {
+  font-size: 1rem; /* Размер шрифта в rem */
+}
+
+.header__menu--item,
+.btn {
+  display: inline-block; /* Задаем свойства строчно-блочного эелемента */
+}
+
+.container img:nth-child(1),
+.container img:nth-child(2),
+.container p {
+  display: block; /* Превращаем в блочный элемент */
+}
+
+.container p,
+.container__block--secondary {
+  font-size: 0.9rem; /* Размер шрифта в rem */
+}
+
+.header,
+.wrapper p {
+  font-weight: 700; /* Начертание шрифта(жирность) */
+}
+
+.header {
+  position: fixed; /* Фиксируем элемент */
+  top: 0; /* Направление фиксации */
+  padding: 1.5% 1%; /* Внутренние отступы */
+  background-color: aliceblue; /* Цвет фона блока */
+}
+
+.header__menu {
+  justify-content: space-between; /* Задаем расстояние между эелементам контейнера и границами блока */
+  width: 75%; /* Ширина эелемента */
+}
+
+.header__menu--item {
+  padding: 0.5% 1.5%; /* Внутренние отступы */
+}
+
+.menu__link:hover {
+  color: rgb(255, 115, 0); /* Цвет шрифта при наведении курсора */
+}
+
+.wrapper {
+  flex-direction: column; /* Задаем вертикальное положение контента */
+  background-image: url(../img/header_logo.jpg); /* Фоновое изображение */
+  margin-top: 4.5%; /* Внешний отступ сверху */
+}
+
+.wrapper p {
+  width: 50%;
+  margin: 14% 26% 0.5%; /* Внешние отступы */
+  padding: 0.5%; /* Внутренние отступы */
+  font-size: 2rem; /* Размер шрифта в rem */
+}
+
+.wrapper__form {
+  margin: 0% 0% 11% 0%; /* Внешние отступы */
+  padding: 0.5%; /* Внутренние отступы */
+}
+
+.search {
+  width: 70%; /* Ширина эелемента */
+  padding: 1.5%; /* Внутренние отступы */
+  border-radius: 10px 0px 0px 10px;
+}
+
+.submit {
+  width: 15%; /* Ширина эелемента */
+  font-size: 1.2rem; /* Размер шрифта в rem */
+  border-radius: 0px 10px 10px 0px; /* Округление эелемента */
+}
+
+.main {
+  margin: 4% auto 2%; /* Внешние отступы */
+  padding: 10% 0% 0%; /* Внутренние отступы */
+  background-image: url(../img/indonesia.jpg); /* Фоновое изображение */
+}
+
+.main__item {
+  margin-top: 18%; /* Внешний отступ сверху */
+  padding: 2%; /* Внутренние отступы */
+  font-size: 1.5rem; /* Размер шрифта в rem */
+  background-color: rgba(22, 22, 22, 0.7); /* Темный фон */
+}
+
+.main__item p {
+  padding: 0.3%; /* Внутренние отступы */
+}
+
+.main__item p:nth-of-type(1) {
+  font-size: 4rem; /* Размер шрифта в rem */
+}
+
+.btn {
+  margin: 1%; /* Внешние отступы */
+  padding: 0.8%; /* Внутренние отступы */
+  border-radius: 10px;
+  font-size: 1.2rem; /* Размер шрифта в rem */
 }
 
 .container p {
-  display: block;
-  width: 60%;
-  text-align: center;
+  width: 60%; /* Ширина эелемента */
   margin: 1% auto 1%; /* Внешние отступы*/
-  font-size: 0.9rem;
-  color: rgb(53, 53, 53);
+}
+
+.container__block {
+  width: 25%; /* Ширина эелемента */
+  margin: 3% auto 0%; /* Внешние отступы */
+  padding: 1%; /* Внутренние отступы */
+  font-size: 1.7rem; /* Размер шрифта в rem */
+  border: 2px solid black; /* Границы блока */
+}
+.container__block--secondary{
+  margin-top: 0.5%; /* Внешний отступ сверху */
 }
 
 .container__item {
-  display: flex;
-  align-items: center;
-  width: 85%;
-  margin: 1% auto; /* Внешние отступы*/
+  align-items: center; /* Расположение контента внутри блока */
+}
+
+.footer {
+  justify-content: space-around; /* Задаем расстояние между эелементам контейнера и границами блока */
+  width: 20%; /* Ширина эелемента */
+  margin: 0% auto 1%; /* Внешние отступы*/
+}
+
+.nav {
+  padding: 0.8%; /* Внутренние отступы*/
 }
