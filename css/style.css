@@ -14,11 +14,18 @@ body {
   font-family: 'Roboto', sans-serif; /* Задаем стандратный шрифт для всей страницы  */
   font-size: 1rem; /* Задаем размер шрифта в rem  */
   line-height: 1; /* Задаем величину пространства между строками  */
-  width: 100%; /* Задаем размер для body  */
 }
 
 a {
   text-decoration: none; /* Убираем стандратную стилизацию для ссылок  */
+}
+
+body,
+.header,
+.main,
+.container,
+.main__item {
+  width: 100%; /* Задаем ширину для группы элементов  */
 }
 
 .header,
@@ -27,44 +34,52 @@ a {
 .wrapper p,
 .wrapper__form,
 .wrapper__item--contacts {
-  display: flex;
+  display: flex; /* Задаем способ компоновки для группы элементов */
 }
 
 .header,
 .wrapper,
 .wrapper p,
 .wrapper__form {
-  justify-content: center;
+  justify-content: center; /* задаем пространство между и вокруг элементов контента вдоль главной оси flex контейнера*/
+}
+
+.header,
+.wrapper {
+  box-shadow: 0 2px 6px rgb(63, 63, 63); /* Тень по границам блока*/
+}
+
+.search,
+.submit {
+  box-shadow: 0 4px 12px rgb(107, 107, 107); /* Тень по границам блока*/
 }
 
 .header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  padding: 1.5% 1%;
-  font-size: 1rem;
-  font-weight: 700;
-  background-color: aliceblue;
-  box-shadow: 0 2px 6px rgb(63, 63, 63);
+  position: fixed; /* Фиксируем элемент*/
+  top: 0; /* Направление фиксации*/
+  padding: 1.5% 1%; /* Внутренние отступы*/
+  font-size: 1rem; /* Размер шрифта в rem*/
+  font-weight: 700; /* начертание шрифта*/
+  background-color: aliceblue; /* Цвет фона блока*/
 }
 
 .header__menu {
-  justify-content: space-between;
-  width: 75%;
+  justify-content: space-between; /* Задаем расстояние между эелементам контейнера и границами блока*/
+  width: 75%; /* Ширина элемента*/
 }
 
 .header__menu--item {
-  display: inline-block;
-  padding: 0.5% 1.5%;
+  display: inline-block; /* Задаем свойства строчно-блочного эелемента*/
+  padding: 0.5% 1.5%; /* Внутренние отступы*/
 }
 
 .menu__link {
-  color: rgb(93, 93, 93);
+  color: rgb(53, 53, 53); /* Цвет шрифта*/
 }
 
 .menu__link:hover {
   cursor: pointer;
-  color: rgb(255, 115, 0);
+  color: rgb(255, 115, 0); /* Цвет шрифта при наведении курсора*/
 }
 
 .wrapper {
@@ -72,45 +87,42 @@ a {
   background-image: url(../img/header_logo.jpg);
   background-size: cover;
   margin-top: 4.5%;
-  box-shadow: 0 2px 6px rgb(63, 63, 63);
 }
 
 .wrapper p {
-  padding: 0.5%;
-  margin: 14% 26% 0.5%;
+  padding: 0.5%; /* Внутренние отступы*/
+  margin: 14% 26% 0.5%; /* Внешние отступы*/
   width: 50%;
-  font-size: 2rem;
+  font-size: 2rem; /* Размер шрифта в rem*/
   font-weight: 700;
   color: aliceblue;
 }
 
 .wrapper__form {
-  padding: 0.5%;
-  margin: 0% 0% 11% 0%;
+  padding: 0.5%; /* Внутренние отступы*/
+  margin: 0% 0% 11% 0%; /* Внешние отступы*/
 }
 
 .search {
   width: 70%;
-  font-size: 1rem;
-  padding: 1.5%;
+  font-size: 1rem; /* Размер шрифта в rem*/
+  padding: 1.5%; /* Внутренние отступы*/
   border-radius: 10px 0 0 10px;
-  box-shadow: 0 4px 12px rgb(107, 107, 107);
 }
 
 .submit {
   width: 15%;
-  font-size: 1.2rem;
+  font-size: 1.2rem; /* Размер шрифта в rem*/
   color: aliceblue;
   background-color: rgb(255, 115, 0);
   border-radius: 0 10px 10px 0;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgb(107, 107, 107);
 }
 
 .wrapper__item--contacts {
   justify-content: space-around;
   align-items: center;
-  margin-top: 20%;
+  margin-top: 20%; /* Внешний отступ сверху*/
   width: 30%;
   border: 2px solid rgb(2, 217, 66);
 }
@@ -121,38 +133,77 @@ a {
 }
 
 .main {
-  width: 100%;
-  padding: 10% 0% 0%;
-  margin: 4% auto;
+  padding: 10% 0% 0%; /* Внутренние отступы*/
+  margin: 4% auto; /* Внешние отступы*/
   background-image: url(../img/indonesia.jpg);
   background-size: cover;
   box-shadow: 0 2px 6px rgb(63, 63, 63);
 }
 
 .main__item {
-  width: 100%;
-  margin-top: 18%;
-  padding: 2%;
-  font-size: 1.5rem;
+  margin-top: 18%; /* Внешний отступ сверху*/
+  padding: 2%; /* Внутренние отступы*/
+  font-size: 1.5rem; /* Размер шрифта в rem*/
   text-align: center;
   color: aliceblue;
   background-color: rgba(22, 22, 22, 0.7);
+}
+
+.main__item p {
+  padding: 0.3%; /* Внутренние отступы*/
 }
 
 .main__item p:nth-of-type(1) {
   font-size: 4rem;
 }
 
-.main__item p {
-  padding: 0.3%;
-}
-
 .btn {
   display: inline-block;
-  padding: 0.8%;
-  margin: 1%;
+  padding: 0.8%; /* Внутренние отступы*/
+  margin: 1%; /* Внешние отступы*/
   border-radius: 10px;
   background-color: rgb(255, 115, 0);
   color: aliceblue;
   cursor: pointer;
+}
+
+.container__block {
+  width: 25%;
+  margin: 3% auto 0%; /* Внешние отступы*/
+  padding: 1%; /* Внутренние отступы*/
+  text-align: center;
+  font-size: 1.7rem;
+  border: 2px solid black;
+}
+
+.container__block--secondary {
+  margin: 0.2% auto 1%; /* Внешние отступы*/
+  padding: 0.8%; /* Внутренние отступы*/
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgb(53, 53, 53);
+  width: 25%;
+}
+
+.container img:nth-child(1),
+.container img:nth-child(2) {
+  display: block;
+  width: 85%;
+  margin: 1% auto; /* Внешние отступы*/
+}
+
+.container p {
+  display: block;
+  width: 60%;
+  text-align: center;
+  margin: 1% auto 1%; /* Внешние отступы*/
+  font-size: 0.9rem;
+  color: rgb(53, 53, 53);
+}
+
+.container__item {
+  display: flex;
+  align-items: center;
+  width: 85%;
+  margin: 1% auto; /* Внешние отступы*/
 }
